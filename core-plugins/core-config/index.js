@@ -14,7 +14,7 @@ var plugin = module.exports = function coreConfig(viper) {
 	var env = viper.env();
 
 	// Location of config-files
-	var configPath = path.resolve( process.cwd(), this.config.path );
+	var configPath = path.resolve( viper.cwd(), this.config.path );
 
 	// extend main-config
 	extend(
