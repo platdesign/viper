@@ -5,6 +5,10 @@ var path = require('path');
 var viper = require('../');
 
 var app = viper({
+	//disabledPlugins: ['coreLogger'],
+	plugins: {
+
+	},
 	verbose: true
 });
 
