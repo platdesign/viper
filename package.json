@@ -1,0 +1,19 @@
+{
+  "name": "viper",
+  "version": "0.0.1",
+  "description": "Configure expressjs applications with plugins",
+  "main": "index.js",
+  "directories": {
+    "example": "example"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Christian Blaschke <mail@platdesign.de>",
+  "license": "MIT",
+  "dependencies": {
+    "colors": "^1.0.3",
+    "express": "^4.10.7",
+    "extend": "^2.0.0"
+  }
+}
