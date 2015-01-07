@@ -8,6 +8,6 @@ var app = viper({
 	verbose: true
 });
 
-app.loadPluginFromPath( path.join(__dirname, '..', '..', 'plugins', 'viper-plugin-jade-mvc'));
+app.loadPluginFromPath( path.join('..', '..', 'plugins', 'viper-plugin-jade-mvc') );
 
 app.bootstrap();
