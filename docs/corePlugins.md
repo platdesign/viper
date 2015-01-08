@@ -18,3 +18,15 @@ By default coreLogger selects `dev`-pattern in development environment and `comb
 	pattern: ['common'|'combined'|'dev'|'short'|'tiny']
 
 	For more information have a look at the docs of [morgan](https://github.com/expressjs/morgan).
+	
+	
+	
+	
+
+
+
+##coreFavicon
+###options
+- **path**
+	
+	Path to favion-file.
