@@ -1,3 +1,1 @@
-'use strict';
-
-module.exports = require('./lib/Viper.js');
+module.exports = require('./lib/viper.js');
