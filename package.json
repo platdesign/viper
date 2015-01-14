@@ -17,7 +17,6 @@
     "extend": "^2.0.0",
     "morgan": "^1.5.1",
     "q": "^1.1.2",
-    "serve-favicon": "^2.2.0",
-    "synth-di": "^0.3.0"
+    "serve-favicon": "^2.2.0"
   }
 }
