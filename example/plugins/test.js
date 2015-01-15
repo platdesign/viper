@@ -8,7 +8,9 @@ module.exports = function() {
 		};
 	});
 
-	this.config(function(config) {
+	this.config(function(config, db) {
+
+
 
 	});
 
@@ -22,8 +24,12 @@ module.exports = function() {
 
 	this.run(function(home, router, injectedRouteHandler) {
 
-		router.get('/', injectedRouteHandler(function(home, res) {
-			res.json(home);
+		router.get('/', injectedRouteHandler(function(home, res, db) {
+
+			db.model('User').findAll().then(function(users) {
+				res.json(users);
+			})
+
 		}));
 
 	});
