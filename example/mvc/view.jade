@@ -1,0 +1,16 @@
+h1 Testseite
+h2 User
+div
+	each user in users
+		li= user.username
+
+
+
+h2 Produkte
+div
+	each item in products
+		li= item.title
+
+
+form(method="POST")
+	button send

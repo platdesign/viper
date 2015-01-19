@@ -17,12 +17,15 @@ var app = viper({
 		backend: {
 
 		}
+	},
+	mvc: {
+		page: {
+
+		}
 	}
 });
 
 
-
-
-//app.plugin( require('./plugins/test.js') );
-app.plugin( require('./plugins/sequelize.js') );
+app.plugin( require('../../plugins/viper-plugin-sequelize') );
 app.plugin( require('../../plugins/viper-plugin-jsonapi') );
+app.plugin( require('../../plugins/viper-plugin-jade-mvc') );
