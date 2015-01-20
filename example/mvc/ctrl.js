@@ -1,9 +1,8 @@
 'use strict';
 
-exports.get = function(db) {
+exports.get = function(db, req) {
 	return {
-		users: db.model('User').findAll(),
-		products: db.model('Product').findAll()
+		account: req.user
 	}
 };
 

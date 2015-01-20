@@ -1,16 +1,14 @@
 h1 Testseite
-h2 User
-div
-	each user in users
-		li= user.username
+
+
+h2 Account
+if account
+	div= account.username
+	form(method="POST", action="/auth/logout")
+		button Logout
+else
+	a(href="/login") Login
+	a(href="/register") Register
 
 
 
-h2 Produkte
-div
-	each item in products
-		li= item.title
-
-
-form(method="POST")
-	button send
