@@ -1,6 +1,6 @@
 {
   "name": "viper",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Configure expressjs applications with plugins",
   "main": "index.js",
   "directories": {
