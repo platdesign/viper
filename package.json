@@ -20,7 +20,11 @@
     "extend": "^2.0.0",
     "glob": "^4.3.5",
     "morgan": "^1.5.1",
+    "promise-from-hash": "^1.0.0",
     "q": "^1.1.2",
-    "serve-favicon": "^2.2.0"
+    "serve-favicon": "^2.2.0",
+    "bcrypt": "^0.8.1",
+    "express-session": "^1.10.2",
+    "jade": "^1.9.2"
   }
 }
