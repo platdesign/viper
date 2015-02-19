@@ -1,0 +1,14 @@
+
+
+header.header-main
+	.page.flex-horizontal
+		.signet(ui-sref="home", ui-sref-active="active") Viper
+		.flex-item-stretch
+		nav.flex-item.flex-horizontal
+			li.flex-item(ui-sref="about", ui-sref-active="active") About
+			li.flex-item(ui-sref="docs", ui-sref-active="active") Docs
+
+
+main
+	.page(ui-view="")
+		h1 Viper

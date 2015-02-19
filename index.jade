@@ -1,0 +1,11 @@
+extends vendor/jadeit/base
+
+block head-assets
+	+js('./public/js/vendor.js')
+	+css('./public/css/vendor.css')
+
+
+block body
+	ng-include(src="'./public/html/app/index.html'")
+	+js('./public/js/app.js')
+	+css('./public/css/app.css')

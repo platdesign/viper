@@ -1,0 +1,10 @@
+@import '../../vendor/_normalize.scss/_normalize.scss';
+@import '../../vendor/pui/pui.scss';
+
+@include pui-reset;
+@include pui-flex;
+@include pui-angular;
+
+:focus {
+	outline: 0 !important;
+}

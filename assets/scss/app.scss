@@ -1,0 +1,45 @@
+@import '../../vendor/pui/pui.scss';
+
+
+header.header-main {
+	background: mix($navy, black, 90%);
+	color: mix($navy, white, 30%);
+	font-weight: 100;
+
+	.signet {
+		align-self: center;
+		padding: 0 .8em 0 0;
+		font-weight: 700;
+		letter-spacing: .1em;
+		text-transform: uppercase;
+		color: mix($navy, white, 60%);
+		transition: color .4s, background .2s;
+		font-size: 1.4em;
+		&.active {
+			color: mix($navy, white, 30%);
+		}
+	}
+	nav {
+		li {
+			list-style: none;
+			padding: 1.2em;
+			transition: color .4s, background .2s;
+			color: mix($navy, white, 40%);
+			letter-spacing: .025em;
+
+			&:hover {
+				background: rgba(white, .05);
+			}
+			&.active {
+				background: rgba(white, .1);
+				color: mix($navy, white, 20%);
+			}
+		}
+	}
+}
+
+
+.page {
+	margin: 0 auto;
+	width: 900px;
+}
