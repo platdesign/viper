@@ -1,0 +1,32 @@
+.docs {
+	margin: 1em 0;
+
+	aside {
+		padding: 1em;
+		width: 240px;
+		margin-right: 2em;
+		font-size: .9em;
+		background: mix(white, $navy, 92%);
+		border-radius: 3px;
+
+
+		dl {
+			dt {
+				font-size: 1.1em;
+				margin-bottom: .5em;
+				border-bottom: 1px solid rgba(white, .5);
+			}
+			dd {
+				line-height: 1.4;
+			}
+
+			&+dl {
+				margin-top: 1.4em;
+			}
+		}
+	}
+
+	main {
+
+	}
+}

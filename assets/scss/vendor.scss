@@ -8,3 +8,27 @@
 :focus {
 	outline: 0 !important;
 }
+
+dl {
+	margin: 0;
+	dt {
+		font-weight: 700;
+	}
+	dd {
+		margin: 0;
+	}
+}
+
+body {
+	font-size: 16px;
+	line-height: 1.2;
+	color: lighten(desaturate($navy, 90%), 25%);
+}
+
+a, [ui-sref], [ng-click] {
+	color: mix($aqua, $navy, 75%);
+
+	&:hover {
+		color: mix($aqua, $navy, 65%);
+	}
+}
