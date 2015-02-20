@@ -1,10 +1,15 @@
 #Viper
 
+
+
 ## Install
 
 	npm install --save viper
+
+
+## [Docs](http://platdesign.github.io/viper/#/docs)
 	
-## Usage
+## Basic usage
 
 	var viper = require('viper');
 	
