@@ -21,23 +21,24 @@ Registers a route handler on [$serverProvider](#/docs/provider/$serverProvider).
 
 #### Example
 
-	app.config(function($routeProvider) {
+```javascript
+app.config(function($routeProvider) {
 		
-		$routeProvider.route({
-			url: '/about',
-			template: './views/about.jade',
-			resolve: {
-				about: function() {
-					return {
-						name: 'Hans',
-						email: 'hans@example.com'
-					};
-				}
-			},
-			controller: function($scope, about) {
-				$scope.about = about;
+	$routeProvider.route({
+		url: '/about',
+		template: './views/about.jade',
+		resolve: {
+			about: function() {
+				return {
+					name: 'Hans',
+					email: 'hans@example.com'
+				};
 			}
-		});
-		
+		},
+		controller: function($scope, about) {
+			$scope.about = about;
+		}
 	});
-
+		
+});
+```

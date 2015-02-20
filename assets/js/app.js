@@ -1,5 +1,9 @@
 'use strict';
 
+var $ = global.jQuery = global.$ = require('jquery');
+require('angular');
+
+
 var angular = global.angular;
 
 // marked
@@ -18,11 +22,23 @@ var app = angular.module('app', [
 ]);
 
 
-
-
 app.config( require('./app/config.js') );
 app.config( require('./app/states.js') );
+app.factory( 'docs', require('./app/factories/docs.js') );
 
+app.directive('highlight', [function(){
+
+	return {
+		restrict: 'A',
+		link: function(scope, el, attrs) {
+
+			el.find('pre code').each(function(i, block) {
+				global.hljs.highlightBlock(block);
+			});
+
+		}
+	};
+}]);
 
 // IMPORTANT to start stateProvider (cause we ng-include the first ui-view - see index.html)
 app.run(['$state', function(){}]);

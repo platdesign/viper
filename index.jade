@@ -1,11 +1,12 @@
 extends vendor/jadeit/base
 
-block head-assets
-	+js('./public/js/vendor.js')
-	+css('./public/css/vendor.css')
 
+
+block head-assets
+	+css('./public/css/app.css')
+	+css('//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/github.min.css')
+	+js('//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js', true)
 
 block body
 	ng-include(src="'./public/html/app/index.html'")
 	+js('./public/js/app.js')
-	+css('./public/css/app.css')

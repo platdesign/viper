@@ -1,9 +1,18 @@
-@import '../../vendor/_normalize.scss/_normalize.scss';
-@import '../../vendor/pui/pui.scss';
+
 
 @include pui-reset;
 @include pui-flex;
 @include pui-angular;
+@include pui-markdown;
+
+[marked] {
+	@extend .markdown-body;
+	font-size: .95em;
+
+	h1,h2,h3,h4 {
+		font-weight: 500;
+	}
+}
 
 :focus {
 	outline: 0 !important;
@@ -20,6 +29,8 @@ dl {
 }
 
 body {
+	font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif;
+
 	font-size: 16px;
 	line-height: 1.2;
 	color: lighten(desaturate($navy, 90%), 25%);
@@ -30,6 +41,10 @@ a, [ui-sref], [ng-click] {
 
 	&:hover {
 		color: mix($aqua, $navy, 65%);
+	}
+
+	&.active {
+		color: mix($aqua, $navy, 35%);
 	}
 }
 

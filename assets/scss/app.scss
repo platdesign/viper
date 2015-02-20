@@ -1,16 +1,13 @@
+@import '../../vendor/_normalize.scss/_normalize.scss';
 @import '../../vendor/pui/pui.scss';
 
-@include pui-markdown;
+@import 'app/modules/vendor';
 
-[marked] {
-	@extend .markdown-body;
-	font-size: .9em;
-}
 
 header.header-main {
 	background: mix($navy, black, 90%);
 	color: mix($navy, white, 30%);
-	font-weight: 100;
+	font-weight: 300;
 
 	.signet {
 		align-self: center;
@@ -49,6 +46,7 @@ header.header-main {
 	margin: 0 auto;
 	max-width: 900px;
 }
+
 
 
 @import './app/modules/docs';
