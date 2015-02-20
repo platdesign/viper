@@ -9,9 +9,16 @@ module.exports = [
 
 		$stateProvider
 			.state('home',{ url: '/'})
-			.state('about', require('./states/about.js') )
 			.state('docs', require('./states/docs.js') )
 				.state('docs.page', require('./states/docs.page.js') )
+
+			.state('page', {
+				url: '/:page',
+				template: '<ng-include marked src="pagePath" highlight />',
+				controller: ['$scope', '$stateParams', function($scope, $params) {
+					$scope.pagePath = './pages/'+$params.page+'.md';
+				}]
+			})
 
 		;
 

@@ -49,7 +49,7 @@ angular.bootstrap($('body'), [app.name]);
 
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"../../vendor/angular-marked/angular-marked.js":11,"../../vendor/marked/lib/marked.js":12,"./app/config.js":2,"./app/factories/docs.js":3,"./app/states.js":4,"angular":8,"jquery":9,"ui-router":10}],2:[function(require,module,exports){
+},{"../../vendor/angular-marked/angular-marked.js":10,"../../vendor/marked/lib/marked.js":11,"./app/config.js":2,"./app/factories/docs.js":3,"./app/states.js":4,"angular":7,"jquery":8,"ui-router":9}],2:[function(require,module,exports){
 'use strict';
 
 module.exports = [function() {
@@ -89,23 +89,22 @@ module.exports = [
 
 		$stateProvider
 			.state('home',{ url: '/'})
-			.state('about', require('./states/about.js') )
 			.state('docs', require('./states/docs.js') )
 				.state('docs.page', require('./states/docs.page.js') )
+
+			.state('page', {
+				url: '/:page',
+				template: '<ng-include marked src="pagePath" highlight />',
+				controller: ['$scope', '$stateParams', function($scope, $params) {
+					$scope.pagePath = './pages/'+$params.page+'.md';
+				}]
+			})
 
 		;
 
 }];
 
-},{"./states/about.js":5,"./states/docs.js":6,"./states/docs.page.js":7}],5:[function(require,module,exports){
-'use strict';
-
-module.exports = {
-	url: '/about',
-	templateUrl: 'public/html/app/about.html'
-};
-
-},{}],6:[function(require,module,exports){
+},{"./states/docs.js":5,"./states/docs.page.js":6}],5:[function(require,module,exports){
 'use strict';
 
 module.exports = {
@@ -116,7 +115,7 @@ module.exports = {
 	}]
 };
 
-},{}],7:[function(require,module,exports){
+},{}],6:[function(require,module,exports){
 'use strict';
 
 module.exports = {
@@ -128,7 +127,7 @@ module.exports = {
 	}]
 };
 
-},{}],8:[function(require,module,exports){
+},{}],7:[function(require,module,exports){
 /**
  * @license AngularJS v1.3.13
  * (c) 2010-2014 Google, Inc. http://angularjs.org
@@ -26259,7 +26258,7 @@ var minlengthDirective = function() {
 })(window, document);
 
 !window.angular.$$csp() && window.angular.element(document).find('head').prepend('<style type="text/css">@charset "UTF-8";[ng\\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\\:form{display:block;}</style>');
-},{}],9:[function(require,module,exports){
+},{}],8:[function(require,module,exports){
 /*!
  * jQuery JavaScript Library v2.1.3
  * http://jquery.com/
@@ -35466,7 +35465,7 @@ return jQuery;
 
 }));
 
-},{}],10:[function(require,module,exports){
+},{}],9:[function(require,module,exports){
 /**
  * State-based routing for AngularJS
  * @version v0.2.8
@@ -38124,7 +38123,7 @@ angular.module('ui.router.compat')
   .provider('$route', $RouteProvider)
   .directive('ngView', $ViewDirective);
 })(window, window.angular);
-},{}],11:[function(require,module,exports){
+},{}],10:[function(require,module,exports){
 /*
  * angular-marked
  * (c) 2014 J. Harshbarger
@@ -38189,7 +38188,7 @@ angular.module('ui.router.compat')
   }]);
 
 }());
-},{}],12:[function(require,module,exports){
+},{}],11:[function(require,module,exports){
 (function (global){
 /**
  * marked - a markdown parser
