@@ -1,17 +1,17 @@
 .docs.flex-horizontal
-	.flex-item
-		aside
-			dl
-				dt Provider
-				dd(ui-sref="docs.page({ page:'provider/routeProvider' })") $routeProvider
-				dd(ui-sref="docs.page({ page:'provider/serverProvider' })") $serverProvider
+	aside.flex-item
 
-			dl
-				dt Service
-				dd $route
-				dd $server
+		dl
+			dt Provider
+			dd(ui-sref="docs.page({ page:'provider/$routeProvider' })") $routeProvider
+			dd(ui-sref="docs.page({ page:'provider/$serverProvider' })") $serverProvider
+
+		dl
+			dt Service
+			dd $route
+			dd $server
 
 
-	.flex-item-stretch
-		main(ui-view="")
-			h1 Docs
+
+	main(ui-view="", autoscroll="false").flex-item-stretch
+		h1 Docs

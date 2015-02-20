@@ -1,5 +1,11 @@
 @import '../../vendor/pui/pui.scss';
 
+@include pui-markdown;
+
+[marked] {
+	@extend .markdown-body;
+	font-size: .9em;
+}
 
 header.header-main {
 	background: mix($navy, black, 90%);
@@ -41,8 +47,10 @@ header.header-main {
 
 .page {
 	margin: 0 auto;
-	width: 900px;
+	max-width: 900px;
 }
 
 
 @import './app/modules/docs';
+
+

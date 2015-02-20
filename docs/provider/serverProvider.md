@@ -1,2 +1,0 @@
-# $serverProvider
-## usage

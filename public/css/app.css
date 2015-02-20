@@ -1,1 +1,555 @@
-header.header-main{background:#001b38;color:#b2bbc5;font-weight:100}header.header-main .signet{-webkit-align-self:center;-ms-flex-item-align:center;align-self:center;padding:0 .8em 0 0;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#66788b;-webkit-transition:color .4s,background .2s;transition:color .4s,background .2s;font-size:1.4em}header.header-main .signet.active{color:#b2bbc5}header.header-main nav li{list-style:none;padding:1.2em;-webkit-transition:color .4s,background .2s;transition:color .4s,background .2s;color:#99a5b2;letter-spacing:.025em}header.header-main nav li:hover{background:rgba(255,255,255,.05)}header.header-main nav li.active{background:rgba(255,255,255,.1);color:#ccd2d8}.page{margin:0 auto;width:900px}.docs{margin:1em 0}.docs aside{padding:1em;width:240px;margin-right:2em;font-size:.9em;background:#eaedef;border-radius:3px}.docs aside dl dt{font-size:1.1em;margin-bottom:.5em;border-bottom:1px solid rgba(255,255,255,.5)}.docs aside dl dd{line-height:1.4}.docs aside dl+dl{margin-top:1.4em}
+/**
+ * Get the first item of a list
+ * @param  {list} $list
+ * @return {int|string|list|float}
+ */
+/**
+ * Get the last item of a list
+ * @param  {list} $list
+ * @return {int|string|list|float}
+ */
+/**
+ * Prepend an item in a list.
+ * @param  {list} $list
+ * @param  {list|int|float|string} $item
+ * @return {list}	Returs the new list.
+ */
+/**
+ * A list of breakpoints in `px` from narrow to wide.
+ * @type {list}
+ */
+/***
+   colors.css v0.2.0
+   http://clrs.cc
+   @mrmrs
+   MIT License
+***/
+/**
+ * DEPRECATED: reset
+ */
+/**
+ * DEPRECATED: reset
+ */
+/**
+ * Media query for orientation landscape
+ */
+/**
+ * Media query for orientation portrait
+ */
+/**
+ * Creates a media-query with min-/max-width
+ */
+/**
+ * Creates a media-query for the breakpoint-width of $index
+ */
+/**
+ * Creates a media-query for the breakpoints smaller than the width of $index
+ */
+/**
+ * Creates a media-query for the breakpoints larger than the width of $index
+ */
+/**
+ * Creates a media-query for the breakpoints between the widths of $min- and $max-index
+ */
+/*** Sourced from this Gist: https://github.com/sindresorhus/github-markdown-css ***/
+@font-face {
+  font-family: octicons-anchor;
+  src: url(data:font/woff;charset=utf-8;base64,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) format('woff'); }
+
+.markdown-body, [marked] {
+  color: #333;
+  overflow: hidden;
+  font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif;
+  line-height: 1.6;
+  word-wrap: break-word; }
+  .markdown-body a, [marked] a {
+    background: transparent; }
+    .markdown-body a:active, [marked] a:active, .markdown-body a:hover, [marked] a:hover {
+      outline: 0; }
+  .markdown-body strong, [marked] strong {
+    font-weight: bold; }
+  .markdown-body h1, [marked] h1 {
+    font-size: 2em;
+    margin: 0.67em 0; }
+  .markdown-body img, [marked] img {
+    border: 0; }
+  .markdown-body hr, [marked] hr {
+    box-sizing: content-box;
+    height: 0; }
+  .markdown-body pre, [marked] pre {
+    overflow: auto; }
+  .markdown-body code, [marked] code, .markdown-body kbd, [marked] kbd, .markdown-body pre, [marked] pre {
+    font-family: monospace, monospace;
+    font-size: 1em; }
+  .markdown-body input, [marked] input {
+    color: inherit;
+    font: inherit;
+    margin: 0; }
+  .markdown-body html input[disabled], [marked] html input[disabled] {
+    cursor: default; }
+  .markdown-body input, [marked] input {
+    line-height: normal; }
+  .markdown-body input[type="checkbox"], [marked] input[type="checkbox"] {
+    box-sizing: border-box;
+    padding: 0; }
+  .markdown-body table, [marked] table {
+    border-collapse: collapse;
+    border-spacing: 0; }
+  .markdown-body td, [marked] td, .markdown-body th, [marked] th {
+    padding: 0; }
+  .markdown-body *, [marked] * {
+    box-sizing: border-box; }
+  .markdown-body input, [marked] input {
+    font: 13px/1.4 Helvetica, arial, freesans, clean, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+  .markdown-body a, [marked] a {
+    color: #4183c4;
+    text-decoration: none; }
+    .markdown-body a:hover, [marked] a:hover, .markdown-body a:focus, [marked] a:focus, .markdown-body a:active, [marked] a:active {
+      text-decoration: underline; }
+  .markdown-body hr, [marked] hr {
+    height: 0;
+    margin: 15px 0;
+    overflow: hidden;
+    background: transparent;
+    border: 0;
+    border-bottom: 1px solid #ddd; }
+    .markdown-body hr:before, [marked] hr:before {
+      display: table;
+      content: ''; }
+    .markdown-body hr:after, [marked] hr:after {
+      display: table;
+      clear: both;
+      content: ''; }
+  .markdown-body h1, [marked] h1, .markdown-body h2, [marked] h2, .markdown-body h3, [marked] h3, .markdown-body h4, [marked] h4, .markdown-body h5, [marked] h5, .markdown-body h6, [marked] h6 {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    line-height: 1.1; }
+  .markdown-body h1, [marked] h1 {
+    font-size: 30px; }
+  .markdown-body h2, [marked] h2 {
+    font-size: 21px; }
+  .markdown-body h3, [marked] h3 {
+    font-size: 16px; }
+  .markdown-body h4, [marked] h4 {
+    font-size: 14px; }
+  .markdown-body h5, [marked] h5 {
+    font-size: 12px; }
+  .markdown-body h6, [marked] h6 {
+    font-size: 11px; }
+  .markdown-body blockquote, [marked] blockquote {
+    margin: 0; }
+  .markdown-body ul, [marked] ul, .markdown-body ol, [marked] ol {
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: 0; }
+    .markdown-body ul ol, [marked] ul ol, .markdown-body ol ol, [marked] ol ol {
+      list-style-type: lower-roman; }
+      .markdown-body ul ol ol, [marked] ul ol ol, .markdown-body ol ol ol, [marked] ol ol ol {
+        list-style-type: lower-alpha; }
+  .markdown-body ul ul ol, [marked] ul ul ol {
+    list-style-type: lower-alpha; }
+  .markdown-body ol ul ol, [marked] ol ul ol {
+    list-style-type: lower-alpha; }
+  .markdown-body dd, [marked] dd {
+    margin-left: 0; }
+  .markdown-body code, [marked] code {
+    font: 12px Consolas, "Liberation Mono", Menlo, Courier, monospace; }
+  .markdown-body pre, [marked] pre {
+    margin-top: 0;
+    margin-bottom: 0;
+    font: 12px Consolas, "Liberation Mono", Menlo, Courier, monospace; }
+  .markdown-body .octicon, [marked] .octicon {
+    font: normal normal 16px octicons-anchor;
+    line-height: 1;
+    display: inline-block;
+    text-decoration: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; }
+  .markdown-body .octicon-link:before, [marked] .octicon-link:before {
+    content: '\f05c'; }
+  .markdown-body > *:first-child, [marked] > *:first-child {
+    margin-top: 0 !important; }
+  .markdown-body > *:last-child, [marked] > *:last-child {
+    margin-bottom: 0 !important; }
+  .markdown-body .anchor, [marked] .anchor {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    display: block;
+    padding-right: 6px;
+    padding-left: 30px;
+    margin-left: -30px; }
+    .markdown-body .anchor:focus, [marked] .anchor:focus {
+      outline: none; }
+  .markdown-body h1, [marked] h1, .markdown-body h2, [marked] h2, .markdown-body h3, [marked] h3, .markdown-body h4, [marked] h4, .markdown-body h5, [marked] h5, .markdown-body h6, [marked] h6 {
+    position: relative;
+    margin-top: 1em;
+    margin-bottom: 16px;
+    font-weight: bold;
+    line-height: 1.4; }
+    .markdown-body h1 .octicon-link, [marked] h1 .octicon-link, .markdown-body h2 .octicon-link, [marked] h2 .octicon-link, .markdown-body h3 .octicon-link, [marked] h3 .octicon-link, .markdown-body h4 .octicon-link, [marked] h4 .octicon-link, .markdown-body h5 .octicon-link, [marked] h5 .octicon-link, .markdown-body h6 .octicon-link, [marked] h6 .octicon-link {
+      display: none;
+      color: #000;
+      vertical-align: middle; }
+    .markdown-body h1:hover .anchor, [marked] h1:hover .anchor, .markdown-body h2:hover .anchor, [marked] h2:hover .anchor, .markdown-body h3:hover .anchor, [marked] h3:hover .anchor, .markdown-body h4:hover .anchor, [marked] h4:hover .anchor, .markdown-body h5:hover .anchor, [marked] h5:hover .anchor, .markdown-body h6:hover .anchor, [marked] h6:hover .anchor {
+      padding-left: 8px;
+      margin-left: -30px;
+      line-height: 1;
+      text-decoration: none; }
+      .markdown-body h1:hover .anchor .octicon-link, [marked] h1:hover .anchor .octicon-link, .markdown-body h2:hover .anchor .octicon-link, [marked] h2:hover .anchor .octicon-link, .markdown-body h3:hover .anchor .octicon-link, [marked] h3:hover .anchor .octicon-link, .markdown-body h4:hover .anchor .octicon-link, [marked] h4:hover .anchor .octicon-link, .markdown-body h5:hover .anchor .octicon-link, [marked] h5:hover .anchor .octicon-link, .markdown-body h6:hover .anchor .octicon-link, [marked] h6:hover .anchor .octicon-link {
+        display: inline-block; }
+  .markdown-body h1, [marked] h1 {
+    padding-bottom: 0.3em;
+    font-size: 2.25em;
+    line-height: 1.2;
+    border-bottom: 1px solid #eee; }
+  .markdown-body h2, [marked] h2 {
+    padding-bottom: 0.3em;
+    font-size: 1.75em;
+    line-height: 1.225;
+    border-bottom: 1px solid #eee; }
+  .markdown-body h3, [marked] h3 {
+    font-size: 1.5em;
+    line-height: 1.43; }
+  .markdown-body h4, [marked] h4 {
+    font-size: 1.25em; }
+  .markdown-body h5, [marked] h5 {
+    font-size: 1em; }
+  .markdown-body h6, [marked] h6 {
+    font-size: 1em;
+    color: #777; }
+  .markdown-body p, [marked] p, .markdown-body blockquote, [marked] blockquote, .markdown-body ul, [marked] ul, .markdown-body ol, [marked] ol, .markdown-body dl, [marked] dl, .markdown-body table, [marked] table, .markdown-body pre, [marked] pre {
+    margin-top: 0;
+    margin-bottom: 16px; }
+  .markdown-body hr, [marked] hr {
+    height: 4px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: #e7e7e7;
+    border: 0 none; }
+  .markdown-body ul, [marked] ul, .markdown-body ol, [marked] ol {
+    padding-left: 2em; }
+    .markdown-body ul ul, [marked] ul ul, .markdown-body ul ol, [marked] ul ol, .markdown-body ol ul, [marked] ol ul, .markdown-body ol ol, [marked] ol ol {
+      margin-top: 0;
+      margin-bottom: 0; }
+  .markdown-body li > p, [marked] li > p {
+    margin-top: 16px; }
+  .markdown-body dl, [marked] dl {
+    padding: 0; }
+    .markdown-body dl dt, [marked] dl dt {
+      padding: 0;
+      margin-top: 16px;
+      font-size: 1em;
+      font-style: italic;
+      font-weight: bold; }
+    .markdown-body dl dd, [marked] dl dd {
+      padding: 0 16px;
+      margin-bottom: 16px; }
+  .markdown-body blockquote, [marked] blockquote {
+    padding: 0 15px;
+    color: #777;
+    border-left: 4px solid #ddd; }
+    .markdown-body blockquote > :first-child, [marked] blockquote > :first-child {
+      margin-top: 0; }
+    .markdown-body blockquote > :last-child, [marked] blockquote > :last-child {
+      margin-bottom: 0; }
+  .markdown-body table, [marked] table {
+    display: block;
+    width: 100%;
+    overflow: auto;
+    word-break: normal;
+    word-break: keep-all; }
+    .markdown-body table th, [marked] table th {
+      font-weight: bold; }
+    .markdown-body table th, [marked] table th, .markdown-body table td, [marked] table td {
+      padding: 6px 13px;
+      border: 1px solid #ddd; }
+    .markdown-body table tr, [marked] table tr {
+      background-color: #fff;
+      border-top: 1px solid #ccc; }
+      .markdown-body table tr:nth-child(2n), [marked] table tr:nth-child(2n) {
+        background-color: #f8f8f8; }
+  .markdown-body img, [marked] img {
+    max-width: 100%;
+    box-sizing: border-box; }
+  .markdown-body code, [marked] code {
+    padding: 0;
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+    margin: 0;
+    font-size: 85%;
+    background-color: rgba(0, 0, 0, 0.04);
+    border-radius: 3px; }
+    .markdown-body code:before, [marked] code:before, .markdown-body code:after, [marked] code:after {
+      letter-spacing: -0.2em;
+      content: "\00a0"; }
+  .markdown-body pre, [marked] pre {
+    padding: 16px;
+    overflow: auto;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f7f7f7;
+    border-radius: 3px;
+    word-wrap: normal; }
+    .markdown-body pre > code, [marked] pre > code {
+      padding: 0;
+      margin: 0;
+      font-size: 100%;
+      word-break: normal;
+      white-space: pre;
+      background: transparent;
+      border: 0; }
+    .markdown-body pre code, [marked] pre code {
+      display: inline;
+      max-width: initial;
+      padding: 0;
+      margin: 0;
+      overflow: initial;
+      line-height: inherit;
+      word-wrap: normal;
+      background-color: transparent;
+      border: 0; }
+      .markdown-body pre code:before, [marked] pre code:before, .markdown-body pre code:after, [marked] pre code:after {
+        content: normal; }
+  .markdown-body .highlight, [marked] .highlight {
+    margin-bottom: 16px;
+    background: #fff; }
+    .markdown-body .highlight pre, [marked] .highlight pre {
+      padding: 16px;
+      overflow: auto;
+      font-size: 85%;
+      line-height: 1.45;
+      background-color: #f7f7f7;
+      border-radius: 3px;
+      margin-bottom: 0;
+      word-break: normal; }
+    .markdown-body .highlight .h, [marked] .highlight .h {
+      color: #333;
+      font-style: normal;
+      font-weight: normal; }
+    .markdown-body .highlight .mf, [marked] .highlight .mf, .markdown-body .highlight .mh, [marked] .highlight .mh, .markdown-body .highlight .mi, [marked] .highlight .mi, .markdown-body .highlight .mo, [marked] .highlight .mo, .markdown-body .highlight .il, [marked] .highlight .il, .markdown-body .highlight .m, [marked] .highlight .m {
+      color: #945277; }
+    .markdown-body .highlight .s, [marked] .highlight .s, .markdown-body .highlight .sb, [marked] .highlight .sb, .markdown-body .highlight .sc, [marked] .highlight .sc, .markdown-body .highlight .sd, [marked] .highlight .sd, .markdown-body .highlight .s2, [marked] .highlight .s2, .markdown-body .highlight .se, [marked] .highlight .se, .markdown-body .highlight .sh, [marked] .highlight .sh, .markdown-body .highlight .si, [marked] .highlight .si, .markdown-body .highlight .sx, [marked] .highlight .sx, .markdown-body .highlight .s1, [marked] .highlight .s1 {
+      color: #df5000; }
+    .markdown-body .highlight .kc, [marked] .highlight .kc, .markdown-body .highlight .kd, [marked] .highlight .kd, .markdown-body .highlight .kn, [marked] .highlight .kn, .markdown-body .highlight .kp, [marked] .highlight .kp, .markdown-body .highlight .kr, [marked] .highlight .kr, .markdown-body .highlight .kt, [marked] .highlight .kt, .markdown-body .highlight .k, [marked] .highlight .k, .markdown-body .highlight .o, [marked] .highlight .o {
+      font-weight: bold; }
+    .markdown-body .highlight .kt, [marked] .highlight .kt {
+      color: #458; }
+    .markdown-body .highlight .c, [marked] .highlight .c, .markdown-body .highlight .cm, [marked] .highlight .cm, .markdown-body .highlight .c1, [marked] .highlight .c1 {
+      color: #998;
+      font-style: italic; }
+    .markdown-body .highlight .cp, [marked] .highlight .cp, .markdown-body .highlight .cs, [marked] .highlight .cs, .markdown-body .highlight .cp, [marked] .highlight .cp {
+      color: #999;
+      font-weight: bold; }
+    .markdown-body .highlight .cp .h, [marked] .highlight .cp .h {
+      color: #999;
+      font-weight: bold; }
+    .markdown-body .highlight .cs, [marked] .highlight .cs {
+      font-style: italic; }
+    .markdown-body .highlight .n, [marked] .highlight .n {
+      color: #333; }
+    .markdown-body .highlight .na, [marked] .highlight .na, .markdown-body .highlight .nv, [marked] .highlight .nv, .markdown-body .highlight .vc, [marked] .highlight .vc, .markdown-body .highlight .vg, [marked] .highlight .vg, .markdown-body .highlight .vi, [marked] .highlight .vi {
+      color: #008080; }
+    .markdown-body .highlight .nb, [marked] .highlight .nb {
+      color: #0086B3; }
+    .markdown-body .highlight .nc, [marked] .highlight .nc {
+      color: #458;
+      font-weight: bold; }
+    .markdown-body .highlight .no, [marked] .highlight .no {
+      color: #094e99; }
+    .markdown-body .highlight .ni, [marked] .highlight .ni {
+      color: #800080; }
+    .markdown-body .highlight .ne, [marked] .highlight .ne {
+      color: #990000;
+      font-weight: bold; }
+    .markdown-body .highlight .nf, [marked] .highlight .nf {
+      color: #945277;
+      font-weight: bold; }
+    .markdown-body .highlight .nn, [marked] .highlight .nn {
+      color: #555; }
+    .markdown-body .highlight .nt, [marked] .highlight .nt {
+      color: #000080; }
+    .markdown-body .highlight .err, [marked] .highlight .err {
+      color: #a61717;
+      background-color: #e3d2d2; }
+    .markdown-body .highlight .gd, [marked] .highlight .gd {
+      color: #000;
+      background-color: #fdd; }
+      .markdown-body .highlight .gd .x, [marked] .highlight .gd .x {
+        color: #000;
+        background-color: #faa; }
+    .markdown-body .highlight .ge, [marked] .highlight .ge {
+      font-style: italic; }
+    .markdown-body .highlight .gr, [marked] .highlight .gr {
+      color: #aa0000; }
+    .markdown-body .highlight .gh, [marked] .highlight .gh {
+      color: #999; }
+    .markdown-body .highlight .gi, [marked] .highlight .gi {
+      color: #000;
+      background-color: #dfd; }
+      .markdown-body .highlight .gi .x, [marked] .highlight .gi .x {
+        color: #000;
+        background-color: #afa; }
+    .markdown-body .highlight .go, [marked] .highlight .go {
+      color: #888; }
+    .markdown-body .highlight .gp, [marked] .highlight .gp {
+      color: #555; }
+    .markdown-body .highlight .gs, [marked] .highlight .gs {
+      font-weight: bold; }
+    .markdown-body .highlight .gu, [marked] .highlight .gu {
+      color: #800080;
+      font-weight: bold; }
+    .markdown-body .highlight .gt, [marked] .highlight .gt {
+      color: #aa0000; }
+    .markdown-body .highlight .ow, [marked] .highlight .ow {
+      font-weight: bold; }
+    .markdown-body .highlight .w, [marked] .highlight .w {
+      color: #bbb; }
+    .markdown-body .highlight .sr, [marked] .highlight .sr {
+      color: #017936; }
+    .markdown-body .highlight .ss, [marked] .highlight .ss {
+      color: #8b467f; }
+    .markdown-body .highlight .bp, [marked] .highlight .bp {
+      color: #999; }
+    .markdown-body .highlight .gc, [marked] .highlight .gc {
+      color: #999;
+      background-color: #EAF2F5; }
+    .markdown-body .highlight .pl-coc, [marked] .highlight .pl-coc, .markdown-body .highlight .pl-entm, [marked] .highlight .pl-entm, .markdown-body .highlight .pl-eoa, [marked] .highlight .pl-eoa, .markdown-body .highlight .pl-pdv, [marked] .highlight .pl-pdv, .markdown-body .highlight .pl-sc, [marked] .highlight .pl-sc, .markdown-body .highlight .pl-sr, [marked] .highlight .pl-sr, .markdown-body .highlight .pl-v, [marked] .highlight .pl-v, .markdown-body .highlight .pl-vpf, [marked] .highlight .pl-vpf {
+      color: #0086b3; }
+    .markdown-body .highlight .pl-mai .pl-sf, [marked] .highlight .pl-mai .pl-sf {
+      color: #0086b3; }
+    .markdown-body .highlight .pl-eoac, [marked] .highlight .pl-eoac, .markdown-body .highlight .pl-mdht, [marked] .highlight .pl-mdht, .markdown-body .highlight .pl-mi1, [marked] .highlight .pl-mi1, .markdown-body .highlight .pl-mri, [marked] .highlight .pl-mri, .markdown-body .highlight .pl-va, [marked] .highlight .pl-va, .markdown-body .highlight .pl-vpu, [marked] .highlight .pl-vpu {
+      color: #008080; }
+    .markdown-body .highlight .pl-c, [marked] .highlight .pl-c, .markdown-body .highlight .pl-pdc, [marked] .highlight .pl-pdc {
+      color: #b4b7b4;
+      font-style: italic; }
+    .markdown-body .highlight .pl-k, [marked] .highlight .pl-k, .markdown-body .highlight .pl-ko, [marked] .highlight .pl-ko, .markdown-body .highlight .pl-kolp, [marked] .highlight .pl-kolp, .markdown-body .highlight .pl-mc, [marked] .highlight .pl-mc, .markdown-body .highlight .pl-mr, [marked] .highlight .pl-mr, .markdown-body .highlight .pl-ms, [marked] .highlight .pl-ms, .markdown-body .highlight .pl-s, [marked] .highlight .pl-s, .markdown-body .highlight .pl-sok, [marked] .highlight .pl-sok, .markdown-body .highlight .pl-st, [marked] .highlight .pl-st {
+      color: #6e5494; }
+    .markdown-body .highlight .pl-ef, [marked] .highlight .pl-ef, .markdown-body .highlight .pl-enf, [marked] .highlight .pl-enf, .markdown-body .highlight .pl-enm, [marked] .highlight .pl-enm, .markdown-body .highlight .pl-entc, [marked] .highlight .pl-entc, .markdown-body .highlight .pl-eoi, [marked] .highlight .pl-eoi, .markdown-body .highlight .pl-sf, [marked] .highlight .pl-sf, .markdown-body .highlight .pl-smc, [marked] .highlight .pl-smc {
+      color: #d12089; }
+    .markdown-body .highlight .pl-ens, [marked] .highlight .pl-ens, .markdown-body .highlight .pl-eoai, [marked] .highlight .pl-eoai, .markdown-body .highlight .pl-kos, [marked] .highlight .pl-kos, .markdown-body .highlight .pl-mp, [marked] .highlight .pl-mp, .markdown-body .highlight .pl-pde, [marked] .highlight .pl-pde, .markdown-body .highlight .pl-stp, [marked] .highlight .pl-stp {
+      color: #458; }
+    .markdown-body .highlight .pl-mh .pl-pdh, [marked] .highlight .pl-mh .pl-pdh {
+      color: #458; }
+    .markdown-body .highlight .pl-enti, [marked] .highlight .pl-enti {
+      color: #d12089;
+      font-weight: bold; }
+    .markdown-body .highlight .pl-cce, [marked] .highlight .pl-cce, .markdown-body .highlight .pl-enc, [marked] .highlight .pl-enc, .markdown-body .highlight .pl-kou, [marked] .highlight .pl-kou, .markdown-body .highlight .pl-mq, [marked] .highlight .pl-mq {
+      color: #f93; }
+    .markdown-body .highlight .pl-mp1 .pl-sf, [marked] .highlight .pl-mp1 .pl-sf {
+      color: #458;
+      font-weight: bold; }
+    .markdown-body .highlight .pl-cos, [marked] .highlight .pl-cos, .markdown-body .highlight .pl-ent, [marked] .highlight .pl-ent, .markdown-body .highlight .pl-md, [marked] .highlight .pl-md, .markdown-body .highlight .pl-mdhf, [marked] .highlight .pl-mdhf, .markdown-body .highlight .pl-ml, [marked] .highlight .pl-ml, .markdown-body .highlight .pl-pdc1, [marked] .highlight .pl-pdc1, .markdown-body .highlight .pl-pds, [marked] .highlight .pl-pds, .markdown-body .highlight .pl-s1, [marked] .highlight .pl-s1, .markdown-body .highlight .pl-scp, [marked] .highlight .pl-scp, .markdown-body .highlight .pl-sol, [marked] .highlight .pl-sol {
+      color: #df5000; }
+    .markdown-body .highlight .pl-c1, [marked] .highlight .pl-c1, .markdown-body .highlight .pl-cn, [marked] .highlight .pl-cn, .markdown-body .highlight .pl-pse, [marked] .highlight .pl-pse, .markdown-body .highlight .pl-vi, [marked] .highlight .pl-vi {
+      color: #a31515; }
+    .markdown-body .highlight .pl-pse .pl-s2, [marked] .highlight .pl-pse .pl-s2 {
+      color: #a31515; }
+    .markdown-body .highlight .pl-mb, [marked] .highlight .pl-mb, .markdown-body .highlight .pl-pdb, [marked] .highlight .pl-pdb {
+      color: #df5000;
+      font-weight: bold; }
+    .markdown-body .highlight .pl-mi, [marked] .highlight .pl-mi, .markdown-body .highlight .pl-pdi, [marked] .highlight .pl-pdi {
+      color: #6e5494;
+      font-style: italic; }
+    .markdown-body .highlight .pl-ms1, [marked] .highlight .pl-ms1 {
+      background-color: #f5f5f5; }
+    .markdown-body .highlight .pl-mdh, [marked] .highlight .pl-mdh, .markdown-body .highlight .pl-mdi, [marked] .highlight .pl-mdi {
+      font-weight: bold; }
+    .markdown-body .highlight .pl-mdr, [marked] .highlight .pl-mdr {
+      color: #0086b3;
+      font-weight: bold; }
+    .markdown-body .highlight .pl-s2, [marked] .highlight .pl-s2 {
+      color: #333; }
+    .markdown-body .highlight .pl-ii, [marked] .highlight .pl-ii {
+      background-color: #df5000;
+      color: #fff; }
+    .markdown-body .highlight .pl-ib, [marked] .highlight .pl-ib {
+      background-color: #f93; }
+    .markdown-body .highlight .pl-id, [marked] .highlight .pl-id {
+      background-color: #a31515;
+      color: #fff; }
+    .markdown-body .highlight .pl-iu, [marked] .highlight .pl-iu {
+      background-color: #b4b7b4; }
+    .markdown-body .highlight .pl-mo, [marked] .highlight .pl-mo {
+      color: #969896; }
+  .markdown-body kbd, [marked] kbd {
+    background-color: #e7e7e7;
+    background-image: -webkit-linear-gradient(#fefefe, #e7e7e7);
+    background-image: linear-gradient(#fefefe, #e7e7e7);
+    background-repeat: repeat-x;
+    display: inline-block;
+    padding: 3px 5px;
+    font: 11px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+    line-height: 10px;
+    color: #000;
+    border: 1px solid #cfcfcf;
+    border-radius: 2px; }
+  .markdown-body .task-list-item, [marked] .task-list-item {
+    list-style-type: none; }
+    .markdown-body .task-list-item + .task-list-item, [marked] .task-list-item + .task-list-item {
+      margin-top: 3px; }
+    .markdown-body .task-list-item input, [marked] .task-list-item input {
+      float: left;
+      margin: 0.3em 0 0.25em -1.6em;
+      vertical-align: middle; }
+
+[marked] {
+  font-size: .9em; }
+
+header.header-main {
+  background: #001b38;
+  color: #b2bbc5;
+  font-weight: 100; }
+  header.header-main .signet {
+    -webkit-align-self: center;
+        -ms-flex-item-align: center;
+            align-self: center;
+    padding: 0 .8em 0 0;
+    font-weight: 700;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: #66788b;
+    -webkit-transition: color .4s, background .2s;
+            transition: color .4s, background .2s;
+    font-size: 1.4em; }
+    header.header-main .signet.active {
+      color: #b2bbc5; }
+  header.header-main nav li {
+    list-style: none;
+    padding: 1.2em;
+    -webkit-transition: color .4s, background .2s;
+            transition: color .4s, background .2s;
+    color: #99a5b2;
+    letter-spacing: .025em; }
+    header.header-main nav li:hover {
+      background: rgba(255, 255, 255, 0.05); }
+    header.header-main nav li.active {
+      background: rgba(255, 255, 255, 0.1);
+      color: #ccd2d8; }
+
+.page {
+  margin: 0 auto;
+  max-width: 900px; }
+
+.docs {
+  margin: 1em 0; }
+  .docs aside {
+    padding: 1em;
+    width: 240px;
+    margin-right: 2em;
+    font-size: .9em;
+    background: #eaedef;
+    border-radius: 3px; }
+    .docs aside dl dt {
+      font-size: 1.1em;
+      margin-bottom: .5em;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.5); }
+    .docs aside dl dd {
+      line-height: 1.4; }
+    .docs aside dl + dl {
+      margin-top: 1.4em; }

@@ -28,3 +28,4 @@ app.config( require('./app/states.js') );
 app.run(['$state', function(){}]);
 
 angular.bootstrap($('body'), [app.name]);
+
