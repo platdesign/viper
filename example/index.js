@@ -7,7 +7,12 @@ var app = viper();
 
 
 
-app.config(function($routeProvider, $q) {
+
+app.config(function($routeProvider, $q, $serverProvider) {
+
+	$serverProvider.resolver('$account', function() {
+		return 'account';
+	});
 
 	$routeProvider
 		.route({
@@ -21,10 +26,11 @@ app.config(function($routeProvider, $q) {
 		.route({
 			url: '/:test',
 			resolve: {
-				_secondResolver:function(_firstResolver, $req){
+				_secondResolver:function(_firstResolver, $req, $account){
 					return {
 						_firstResolver: _firstResolver,
-						_secondResolver: $req.params.test
+						_secondResolver: $req.params.test,
+						$account: $account
 					};
 				},
 				_thirdResolver:function(_secondResolver) {
@@ -32,7 +38,8 @@ app.config(function($routeProvider, $q) {
 					return _secondResolver;
 				}
 			},
-			controller: function(_test) {
+			controller: function(_thirdResolver) {
+				return _thirdResolver
 			}
 		})
 		.route({
