@@ -11,43 +11,42 @@ app.config(function($routeProvider, $q) {
 
 	$routeProvider
 		.route({
-			name: 'home',
 			url: '/',
 			resolve: {
-				_test: function() {
-					return $q.delay(200).then(function(){ return 123; });
+				_firstResolver: function() {
+					return 'First Resolver';
 				}
 			}
 		})
 		.route({
-			name: 'home.test',
-			url: '/test',
-			resolveParent: true,
+			url: '/:test',
 			resolve: {
-				_test:function(_test){
-					console.log(_test)
-					return $q.delay(200).then(function(){ return 345; });
+				_secondResolver:function(_firstResolver, $req){
+					return {
+						_firstResolver: _firstResolver,
+						_secondResolver: $req.params.test
+					};
 				},
-				_qweqwe:function(_test) {
-					return $q.delay(200).then(function(){ return _test; });
+				_thirdResolver:function(_secondResolver) {
+					_secondResolver._thirdResolver = '123';
+					return _secondResolver;
 				}
 			},
 			controller: function(_test) {
 			}
 		})
 		.route({
-			name: 'home.test.a',
-			url: '/test/a',
-			resolveParent: true,
+			url: '/:test/a',
 			resolve: {
-				_finally: function(_qweqwe) {
-					//return 123;
-					return $q.delay(0).then(function(){ return _qweqwe; });
+				_finally: function (_thirdResolver) {
+					console.log('called _finally');
+					return _thirdResolver;
 				}
 			},
-			controller: function(_finally) {
+			controller: function(_finally, $req) {
+				console.log('called controller');
 				//return _finally
-				return $q.delay(0).then(function(){ return _finally; });
+				return _finally;
 			}
 		})
 	;
