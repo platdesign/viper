@@ -1,92 +1,56 @@
 'use strict';
 
-var Q = require('q');
-var Sequelize = require('sequelize');
-
 var viper = require('../');
 
 
-var app = viper({
-	sequelize: {
-		db: {
-			database: 'test',
-			username: 'dev',
-			password: 'dev',
-			options: {
-				logging: false
-			}
-		}
-	},
-	jsonApi: {
-		backend: {
-
-		}
-	},
-	mvc: {
-		page: {
-
-		}
-	},
-	session: {
-		dbService: 'db'
-	},
-	account: {
-		dbService: 'db',
-		//baseRoute: '/account'
-	}
-});
-
-/*
-app.plugin( require('./plugins/session-sequelize.js') );
-app.plugin( require('../../plugins/viper-plugin-sequelize') );
-app.plugin( require('../../plugins/viper-plugin-jsonapi') );
-app.plugin( require('../../plugins/viper-plugin-jade-mvc') );
-app.plugin( require('../../plugins/viper-plugin-account-sequelize') );
-*/
+var app = viper();
 
 
-app.config(function($routeProvider, $serverProvider, $dbProvider) {
 
-
-	$dbProvider.connect('db', function() {
-
-	});
-
-	$serverProvider
-		.registerSessionStore(function(sessionMiddleware, $db) {
-			var SequelizeStore = require('connect-sequelize')(sessionMiddleware);
-			return new SequelizeStore($db.db);
-		});
+app.config(function($routeProvider, $q) {
 
 	$routeProvider
 		.route({
+			name: 'home',
 			url: '/',
-			//method: 'GET',
-			//template: './views/test.jade',
 			resolve: {
-				test: function() {
-					return 123;
+				_test: function() {
+					return $q.delay(200).then(function(){ return 123; });
 				}
-			},
-			controller: function($scope, $account, test) {
-				$scope.test = test;
-				$scope.account = $account;
-			},
-			permissions: {
-				only: ['authenticated']
 			}
-
 		})
 		.route({
-			url: '/test/:name',
-			//method: 'GET',
-			//template: './views/test.jade',
+			name: 'home.test',
+			url: '/test',
+			resolveParent: true,
+			resolve: {
+				_test:function(_test){
+					console.log(_test)
+					return $q.delay(200).then(function(){ return 345; });
+				},
+				_qweqwe:function(_test) {
+					return $q.delay(200).then(function(){ return _test; });
+				}
+			},
+			controller: function(_test) {
+			}
+		})
+		.route({
+			name: 'home.test.a',
+			url: '/test/a',
+			resolveParent: true,
+			resolve: {
+				_finally: function(_qweqwe) {
+					//return 123;
+					return $q.delay(0).then(function(){ return _qweqwe; });
+				}
+			},
+			controller: function(_finally) {
+				//return _finally
+				return $q.delay(0).then(function(){ return _finally; });
+			}
 		})
 	;
-
-});
-
-app.run(function($db, $log) {
 
 });
 
