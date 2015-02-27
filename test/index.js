@@ -2,13 +2,14 @@
 
 var describe = global.describe;
 var it = global.it;
+var before = global.before;
 var expect = require("chai").expect;
 
 var viper = require('../');
 
 
 function hasMethod(obj, method) {
-	it('has method: '+method+'()', function(){
+	it('has method: '+method, function(){
 		expect(obj).to.have.property(method).that.is.a('function');
 	});
 }
@@ -18,7 +19,7 @@ function methodCanBeChained(obj, method, args) {
 		expect(obj[method].apply(obj, args)).that.deep.equals(obj);
 	});
 }
-
+/*
 describe('Viper', function() {
 
 
@@ -42,9 +43,61 @@ describe('Viper', function() {
 
 	});
 
+
+	describe('Instance bootstrapped', function() {
+
+		var app = viper();
+
+
+
+		var bootstraped;
+		before(function() {
+			bootstraped = app._bootstrap();
+			return bootstraped;
+		});
+
+		it('successfully bootstrapped', function() {
+			return bootstraped;
+		});
+
+		function testProvider(name, testHandler) {
+			return app.di.getProvider(name)
+			.then(function(provider) {
+
+				var helper = {
+					hasMethod: function(methodName) {
+						return expect(provider).to.have.property(methodName).that.is.a('function');
+					}
+				};
+
+				return testHandler(provider, helper);
+
+			});
+		}
+
+		function hasMethod(name) {
+			it('has method: '+name, function() {
+				return testProvider('$errorsProvider', function(prov, helper){
+					helper.hasMethod(name);
+				});
+			});
+		}
+
+		describe('$errorsProvider', function() {
+
+			hasMethod('$get');
+			hasMethod('createError');
+
+		});
+
+
+
+
+	});
+
 });
 
-
+*/
 describe('Tools', function() {
 
 	describe('Lib', function() {
@@ -141,3 +194,4 @@ describe('Tools', function() {
 	});
 
 });
+
