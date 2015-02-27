@@ -1,7 +1,6 @@
 #Viper
 
-[![Build Status](https://travis-ci.org/platdesign/viper.svg?branch=master)](https://travis-ci.org/platdesign/viper)
-
+[![Build Status](https://img.shields.io/travis/platdesign/viper.svg)](https://travis-ci.org/platdesign/viper)
 
 ##Install
 
