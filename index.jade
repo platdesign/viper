@@ -8,5 +8,7 @@ block head-assets
 	+js('//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js', true)
 
 block body
-	ng-include(src="'./public/html/app/index.html'")
+	div(ui-view="")
+
+
 	+js('./public/js/app.js')

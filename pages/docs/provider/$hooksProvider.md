@@ -29,6 +29,6 @@ app.run(function($hooks){
 });
 ```
 
-Read more about [$hooks](#/docs/service/$hooks)-service.
+Read more about [$hooks](#/docs/hooks)-service.
 
 ------------------------------------------------------------

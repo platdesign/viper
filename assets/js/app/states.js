@@ -8,7 +8,13 @@ module.exports = [
 		$urlRouterProvider.otherwise('/');
 
 		$stateProvider
-			.state('home',{ url: '/'})
+
+			.state('app', require('./states/app'))
+			.state('app.page', require('./states/app.page'))
+			.state('app.page.sub', require('./states/app.page.sub'))
+
+
+/*
 			.state('docs', require('./states/docs.js') )
 				.state('docs.page', require('./states/docs.page.js') )
 
@@ -19,7 +25,7 @@ module.exports = [
 					$scope.pagePath = './pages/'+$params.page+'.md';
 				}]
 			})
-
+*/
 		;
 
 }];

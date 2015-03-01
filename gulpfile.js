@@ -39,10 +39,6 @@ jade.register({
 	index: {
 		src: './index.jade',
 		dest: './'
-	},
-	assets: {
-		src: './assets/jade/**/*.jade',
-		dest: './public/html'
 	}
 });
 

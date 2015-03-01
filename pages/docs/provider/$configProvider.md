@@ -7,7 +7,7 @@
 
 #### Params
 
-- **configPath** `String` Path to position of required config. String will be [$parsed](#/docs/tools/$parse) on main config object.
+- **configPath** `String` Path to position of required config. String will be [$parsed](#/docs/tools) on main config object.
 
 #### Returns `String|Array|Object|Int|Bool`
 

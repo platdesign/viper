@@ -1,0 +1,11 @@
+header.header-main
+	#page.flex-horizontal
+		.signet(ui-sref="app", ui-sref-active="active") {{ _config.title }}
+		.flex-item-stretch
+		nav.flex-item.flex-horizontal
+			li.flex-item(ng-repeat="item in pages", ui-sref="app.page({page: item.name})", ui-sref-active="active") {{ item.title }}
+
+
+main
+	#page(ui-view="", autoscroll="false")
+		div(ng-include="indexView", marked="", highlight="")

@@ -3,7 +3,9 @@
 
 @import 'app/modules/vendor';
 
-
+body {
+	overflow-y: scroll;
+}
 header.header-main {
 	background: mix($navy, black, 90%);
 	color: mix($navy, white, 30%);
@@ -42,9 +44,10 @@ header.header-main {
 }
 
 
-.page {
+#page {
 	margin: 0 auto;
 	max-width: 900px;
+	min-width: 600px;
 }
 
 

@@ -382,7 +382,7 @@ img {
         -ms-flex: 0 0 auto;
             flex: 0 0 auto;
     position: relative;
-    overflow: auto; }
+    overflow-x: hidden; }
   .flex-horizontal > .flex-item-stretch, .flex-vertical > .flex-item-stretch {
     -webkit-box-flex: 1;
     -webkit-flex: 1 1 auto;
@@ -895,6 +895,9 @@ a, [ui-sref], [ng-click] {
   a.active, [ui-sref].active, [ng-click].active {
     color: #2c6082; }
 
+body {
+  overflow-y: scroll; }
+
 header.header-main {
   background: #001b38;
   color: #b2bbc5;
@@ -926,13 +929,14 @@ header.header-main {
       background: rgba(255, 255, 255, 0.1);
       color: #ccd2d8; }
 
-.page {
+#page {
   margin: 0 auto;
-  max-width: 900px; }
+  max-width: 900px;
+  min-width: 600px; }
 
-.docs {
+.page {
   margin: 1em 0; }
-  .docs aside {
+  .page aside {
     padding: 1em;
     width: 240px;
     margin-right: 2em;
@@ -940,12 +944,12 @@ header.header-main {
     background: #f2f3f5;
     border-radius: 3px;
     font-weight: 400; }
-    .docs aside dl dt {
+    .page aside dl dt {
       font-size: 1.2em;
       margin-bottom: .5em;
       border-bottom: 1px solid rgba(0, 0, 0, 0.15);
       font-weight: 400; }
-    .docs aside dl dd {
+    .page aside dl dd {
       line-height: 1.5; }
-    .docs aside dl + dl {
+    .page aside dl + dl {
       margin-top: 1.4em; }

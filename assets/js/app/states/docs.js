@@ -2,7 +2,7 @@
 
 module.exports = {
 	url: '/docs',
-	templateUrl: 'public/html/app/docs.html',
+	template: require('./docs.jade'),
 	controller: ['$scope', 'docs', function($scope, docs) {
 		$scope.docs = docs;
 	}]

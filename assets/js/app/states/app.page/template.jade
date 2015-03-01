@@ -1,0 +1,22 @@
+.page
+	.flex-horizontal
+		aside.flex-item(ng-if="_page.pages.length || _page.groupedPages.length")
+			dl(ng-if="_page.pages.length")
+				dd(
+					ng-repeat="item in _page.pages"
+					ui-sref="app.page.sub({ sub: item.name })",
+					ui-sref-active="active"
+				) {{item.title}}
+
+			dl(ng-if="_page.groupedPages.length", ng-repeat="item in _page.groupedPages")
+				dt {{ item.title }}
+				dd(
+					ng-repeat="item in item.pages"
+					ui-sref="app.page.sub({ sub: item.name })",
+					ui-sref-active="active"
+				) {{item.title}}
+
+
+
+		main(ui-view="", autoscroll="false").flex-item-stretch
+			div(ng-include="_page.view", marked="", highlight="")
