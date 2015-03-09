@@ -27,8 +27,12 @@
     "morgan": "^1.5.1",
     "promise-from-hash": "^1.0.0",
     "q": "^1.1.2",
+    "sails-memory": "^0.10.3",
+    "sails-mongo": "^0.10.5",
+    "sails-mysql": "^0.10.11",
     "serve-favicon": "^2.2.0",
-    "string": "^3.0.0"
+    "string": "^3.0.0",
+    "waterline": "^0.10.18"
   },
   "devDependencies": {
     "chai": "^2.1.0"
